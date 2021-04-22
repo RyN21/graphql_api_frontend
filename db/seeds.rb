@@ -9,7 +9,7 @@
 
 5.times do
   user = User.create(
-                      name: Faker::Name,
+                      name: Faker::Name.name,
                       email: Faker::Internet.email,
                       username: Faker::JapaneseMedia::DragonBall.character
                     )
