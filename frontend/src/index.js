@@ -12,8 +12,14 @@ const link = createHttpLink({
   uri: 'http://localhost:3000/graphql'
 })
 
+const client = new ApolloClient({
+  link: link,
+  cache: new InMemoryCache()
+})
+
 
 ReactDOM.render(
+  <ApolloProvider client={client}>
   <React.StrictMode>
     <App />
   </React.StrictMode>,
