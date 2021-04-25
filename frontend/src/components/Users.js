@@ -33,3 +33,5 @@ function Users({ selectUser }) {
     </div>
   )
 }
+
+export default Users; 
