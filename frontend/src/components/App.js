@@ -1,4 +1,5 @@
 import React from 'react'
+import User from './User';
 import Users from './Users';
 
 class App extends React.Component {
