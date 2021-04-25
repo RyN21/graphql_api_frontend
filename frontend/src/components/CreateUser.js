@@ -16,3 +16,17 @@ const CREATE_USER = gql `
     }
   }
 `;
+
+class CreateUser extends Component {
+  state = {
+    name: '',
+    email: '',
+    username: ''
+  }
+
+  onSubmit = (e, createUser) => {
+    e.preventDefault();
+    createUser({ variables: this.state });
+    this.setState({ name: '', email: '', username: '' })
+  }
+}
