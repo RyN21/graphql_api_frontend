@@ -37,7 +37,7 @@ function User({ user, selectUser }) {
           <UserAvatar user ={user} />
         </div>
         <div className="pox-4 flex-1 w-full">
-          <Posts post={data.user.posts} user={user} />
+          <Posts posts={data.user.posts} user={user} />
         </div>
       </div>
     </React.Fragment>
