@@ -71,6 +71,7 @@ class CreateUser extends Component {
               </form>
             </div>
           )}
-    )
+        </Mutation>
+    );
   }
 }
