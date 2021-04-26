@@ -65,6 +65,7 @@ class CreateUser extends Component {
                       onChange={e => this.setState({ username: e.target.value })} />
                   </div>
                   <button className="bg-blue-500 text-white px-4 py-2 rounded" type="submit">
+                    Create User
                   </button>
                 </div>
               </form>
