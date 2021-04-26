@@ -2,7 +2,7 @@ import React from 'react';
 import { useQuery } from '@apollo/react-hooks';
 import gql from 'graphql-tag';
 import UserAvatar from './UserAvatar';
-// import CreateUser from './CreateUser';
+import CreateUser from './CreateUser';
 
 const GET_USERS = gql `
   {
@@ -30,6 +30,9 @@ function Users({ selectUser }) {
           <UserAvatar user={user} />
         </div>
       ))}
+
+      <div className="lg:m-4 lg:w-1/4 w-full rounded shadow-lg">
+        <CreateUser onCreateUser={updateUser}
     </div>
   )
 }
