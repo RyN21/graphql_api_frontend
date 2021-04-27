@@ -22,6 +22,14 @@ function Users({ selectUser }) {
   if (loading) return 'Loading...';
   if (error) return `Error ${error.message}`;
 
+  function updateUser(cache, {data: { createUser }}) {
+    const { users } = cache.readQuery({ query: GET_USERS });
+    cache.writeQuery({
+      query: GET_USERS,
+      data: { users: users.concat([createUser.user]) },
+    });
+  }
+
   return(
     <div className="flex flex-wrap items-center pb-16">
       {data.users.map(user => (
@@ -32,7 +40,8 @@ function Users({ selectUser }) {
       ))}
 
       <div className="lg:m-4 lg:w-1/4 w-full rounded shadow-lg">
-        <CreateUser onCreateUser={updateUser}
+        <CreateUser onCreateUser={updateUser} />
+      </div>
     </div>
   )
 }
