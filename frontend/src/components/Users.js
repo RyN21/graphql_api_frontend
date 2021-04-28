@@ -39,9 +39,7 @@ function Users({ selectUser }) {
         </div>
       ))}
 
-      <div className="lg:m-4 lg:w-1/4 w-full rounded shadow-lg">
-        <CreateUser onCreateUser={updateUser} />
-      </div>
+      <CreateUser onCreateUser={updateUser} />
     </div>
   )
 }
