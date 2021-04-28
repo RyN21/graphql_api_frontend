@@ -39,8 +39,8 @@ class CreateUser extends Component {
             <div className="lg:fixed bottom-0 left-0 w-full bg-white border-gray-300">
               <form className="lg:px-8 pt-2 pb-2" onSubmit={e => this.onSubmit(e, createUserMutation)}>
                 <div className="lg:flex flex-wrap flex-between items-center justify-center lg:p-0 p-6">
-                  <h4 className="font-bold lg:pr-4 mb-2">Create new user</h4>
-                  <div className="lg:pr-4 mb-2">
+                  <h4 className="font-bold lg:pr-4">Create new user</h4>
+                  <div className="lg:pr-4">
                     <input
                       className="border rounded w-full py-2 px-3"
                       type="text"
@@ -56,7 +56,7 @@ class CreateUser extends Component {
                       placeholder="Email"
                       onChange={e => this.setState({ email: e.target.value })} />
                   </div>
-                  <div className="lg:pr-4 mb-2">
+                  <div className="lg:pr-4">
                     <input
                       className="border rounded w-full py-2 px-3"
                       type="text"
