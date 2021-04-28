@@ -36,7 +36,7 @@ class CreateUser extends Component {
         mutation={CREATE_USER}
         update={this.props.onCreateUser}>
           {createUserMutation => (
-            <div className="lg:fixed bottom-o left-0 w-full bg-white border-gray-300">
+            <div className="lg:fixed bottom-0 left-0 w-full bg-white border-gray-300">
               <form className="lg:px-8 pt-2 pb-2" onSubmit={e => this.onSubmit(e, createUserMutation)}>
                 <div className="lg:flex flex-wrap flex-between items-center justify-center lg:p-0 p-6">
                   <h4 className="font-bold lg:pr-4 mb-2">Create new user</h4>
